@@ -21,15 +21,15 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 
-// app.get("/", (req, res) => { 
-//         const user = new User({
-//                 handle: "Josh",
-//                 email: "JYBright@liberl.orb",
-//                 password: "EyesOfAmber"
-//             })
-//             user.save()
-//             res.send("Hello");
-// });
+app.get("/", (req, res) => { 
+        const user = new User({
+                handle: "Josh",
+                email: "JYBright@liberl.orb",
+                password: "EyesOfAmber"
+            })
+            user.save()
+            res.send("Hello World");
+});
         
 app.use(passport.initialize());
 require('./config/passport')(passport);
